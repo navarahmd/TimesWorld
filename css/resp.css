@@ -212,6 +212,7 @@
 
     .about-sec .banner-right img:first-child {
         transform: translateY(0);
+        margin-bottom: 20px;
     }
 
     .about-sec .banner-right {
