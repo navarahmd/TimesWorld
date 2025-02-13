@@ -1,0 +1,253 @@
+/*************Responsive Styles*****************/
+/***************iPhone Portrait**************/
+@media only screen and (max-width: 479px) and (min-width: 320px){
+
+
+}
+/**********************iPhone Landscape*************/
+@media only screen and (max-width: 767px) and (min-width: 480px){
+ 
+}
+/*************************iPad Portrait***************/
+@media only screen and (max-width: 985px) and (min-width: 768px){
+    header {
+        width: 100%;
+    }
+    footer .footer-row .layout-col {
+        width: 100%;
+    }
+
+    .promo-sec .promo-slider .promo-single img {
+        height: 350px;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    header.fixed .logo {
+        display: block;
+    }
+    .navbar-toggler-icon {
+        background: url('../images/hamburger.png') no-repeat;
+        background-size: contain;
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .navbar li a ,
+    .navbar-nav .nav-link.active,
+     .navbar-nav .nav-link.show{
+        color: var(--primary-color) !important;
+    }
+
+    footer .copyright ul {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    footer .copyright ul li a {
+        white-space: nowrap;
+    }
+
+    .about-sec .row {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .gallery-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .promo-sec .promo-slider .promo-single h4 {
+        font-size: 18px;
+        line-height: normal;
+    }
+
+    .about-sec .banner-right img {
+        height: 250px;
+    }
+
+    .about-sec .banner-right img:nth-child(2) {
+        right: -40px;
+    }
+
+    .main-banner .container::before,
+    .main-banner .container::after {
+        z-index: 0;
+    }
+
+    .navbar {
+        border-bottom: 0;
+    }
+
+}
+/**************iPad Landscape***************/
+@media only screen and ( max-width: 1024px ) and (min-width: 986px){
+
+    footer .footer-row .layout-col {
+        width: 100%;
+    }
+
+    .promo-sec .promo-slider .promo-single img {
+        height: 350px;
+    }
+
+    .about-sec .banner-right img {
+        height: 250px;
+    }
+
+    .about-sec .banner-right img:nth-child(2) {
+        right: -60px;
+    }
+
+}
+/*******************************************/
+
+
+@media only screen and (max-width: 767px) {
+    h1 {
+        font-size: 30px;
+        line-height: normal;
+    }
+
+    .navbar {
+        border-bottom: 0;
+    }
+
+    .main-banner .container::before,
+    .main-banner .container::after {
+        z-index: 0;
+    }
+
+    .promo-sec .promo-slider .promo-single h4 {
+        font-size: 18px;
+        line-height: normal;
+    }
+
+    .about-sec .banner-right img {
+        height: 250px;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    header.fixed .logo {
+        display: block;
+    }
+
+    .navbar li a ,
+    .navbar-nav .nav-link.active,
+     .navbar-nav .nav-link.show{
+        color: var(--primary-color) !important;
+    }
+
+    header .logo img {
+        width: 120px;
+    }
+
+    .main-banner .banner-single .contents {
+        padding-top: 250px;
+        padding-bottom: 80px;
+    }
+
+    .promo-sec .promo-slider .slick-arrow {
+        display: none !important;
+    }
+
+    footer .copyright ul {
+        flex-wrap: wrap;
+        gap: 0;
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+
+    footer .c-text {
+        margin-bottom: 20px;
+    }
+
+    br {
+        display: none;
+    }
+
+    .event-sec .event-slider {
+        transform: translateX(0);
+    }
+
+    .about-sec .row {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .gallery-row {
+        grid-template-columns: 1fr;
+    }
+
+    .galler-sec .nav-tabs {
+        gap: 0;
+    }
+
+    .galler-sec .nav-tabs .nav-link {
+        margin: 10px 5px;
+    }
+
+    .galler-sec .nav-tabs .nav-link.active::before {
+        bottom: -8px;
+    }
+
+    .promo-sec .promo-slider .promo-single {
+        margin: 0;
+    }
+
+    .promo-sec .promo-slider {
+        width: 100%;
+    }
+
+    .about-sec .banner-right img:first-child {
+        transform: translateY(0);
+    }
+
+    .about-sec .banner-right {
+        margin-top: 20px;
+    }
+
+    .about-sec .banner-right img:nth-child(2) {
+        position: relative;
+    }
+
+    footer .footer-row .layout-col {
+        width: 100%;
+    }
+
+    footer .footer-row h3 {
+        margin: 25px 0;
+    }
+
+    .main-banner ul.slick-dots {
+        bottom: 30px;
+    }
+    
+    header .logo {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    header {
+        min-height: 100px;
+        padding: 15px 10px;
+    }
+
+    .navbar-toggler-icon {
+        background: url('../images/hamburger.png') no-repeat;
+        background-size: contain;
+        width: 50px !important;
+        height: 50px !important;
+    }
+}

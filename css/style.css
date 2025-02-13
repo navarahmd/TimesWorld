@@ -1,0 +1,737 @@
+:root {
+    --primary-color: #243230;
+    --secondary-color: #FFFEF2;
+    --primary-color: #243230;
+    --white-color: #fff;
+    --border-color: #FFFEF2;
+}
+
+@font-face {
+    font-family: "Lato-Regular";
+    src: url('../fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Lato-Medium";
+    src: url('../fonts/Lato-Medium.ttf');
+}
+@font-face {
+    font-family: "Lato-Bold";
+    src: url('../fonts/Lato-Bold.ttf');
+}
+
+@font-face {
+    font-family: "Felix Titling";
+    src: url('../fonts/FELIXTI.TTF');
+}
+
+body {
+    background-color: var(--secondary-color);
+}
+
+section {
+    overflow: hidden;
+}
+
+h1 {
+    font-family: "Felix Titling";
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 56.13px;
+    letter-spacing: 6px;
+    text-align: center;
+    color: var(--white-color);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: "Felix Titling";
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 46.78px;
+    letter-spacing: 3px;
+    color: var(--primary-color);
+}
+
+p {
+    font-family: "Lato-Regular";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0;
+    color: #636363;
+    margin: 0;
+}
+
+a {
+    display: inline-block;
+}
+
+/* Button  */
+
+.btn-primary {
+    background: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--secondary-color);
+    font-family: "Lato-Medium";
+    font-size: 14px;
+    line-height: 16.8px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 16px 28px;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color) !important;
+    width: fit-content;
+    color: var(--primary-color) !important;
+}
+
+.btn-primary:hover {
+    background: var(--secondary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
+}
+
+.btn-secondary:hover {
+    background: var(--primary-color) !important;
+    border-color: var(--secondary-color) !important;
+    color: var(--secondary-color) !important;
+}
+
+/* Header  */
+header .logo {
+    padding-top: 70px;
+    padding-bottom: 25px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+header.fixed .logo {
+    display: none;
+
+}
+
+.navbar-nav {
+    padding: 25px 0;
+}
+
+.navbar ul {
+    gap: 35px;
+}
+
+.navbar li a {
+    font-family: "Lato-Medium";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21.6px;
+    letter-spacing: 10%;
+    color: var(--white-color);
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.navbar li .nav-link.active,
+.navbar li .nav-link:hover {
+    color: var(--white-color);
+}
+
+.navbar li .nav-link.active::before,
+.navbar li .nav-link:hover::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: -20px;
+    background-color: #0EE3C4;
+    color: var(--white-color);
+}
+
+.navbar {
+    border-bottom: 1px solid #fffef282;
+}
+
+header.fixed .navbar {
+    border-bottom: none;
+}
+
+header.fixed {
+    background-color: var(--primary-color);
+}
+
+/* Banner  */
+
+.main-banner .container {
+    /* min-height: 1000px; */
+    position: relative;
+}
+
+.main-banner .container::before {
+    position: absolute;
+    content: '';
+    right: 0;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    background-color: var(--border-color);
+    z-index: 0;
+}
+
+.main-banner .container::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    background-color: var(--border-color);
+    z-index: 0;
+}
+
+.main-banner .banner-bg-linear {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 495px;
+    background: linear-gradient(181.28deg, #000000 0.89%, rgba(102, 102, 102, 0) 98.71%);
+
+}
+
+.main-banner .banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 50%;
+}
+
+.main-banner .banner-single {
+    position: relative;
+}
+
+.main-banner .banner-single img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.main-banner .banner-single {
+    position: relative;
+}
+
+.main-banner .banner-single .contents {
+    padding-top: 450px;
+    padding-bottom: 160px;
+    position: relative;
+    z-index: 4;
+}
+
+.main-banner ul.slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.main-banner ul.slick-dots button {
+    display: none;
+}
+
+.main-banner ul.slick-dots li {
+    cursor: pointer;
+    background-color: var(--white-color);
+    opacity: 30%;
+    width: 11px;
+    height: 11px;
+    border-radius: 100%;
+    margin: 0 6px;
+}
+
+.main-banner ul.slick-dots li.slick-active {
+    opacity: 1 !important;
+}
+
+/* About section  */
+.about-sec {
+    position: relative;
+    min-height: 720px;
+}
+
+.about-sec .container {
+    border-left: 1px solid #24323033;
+    border-right: 1px solid #24323033;
+    padding-top: 130px;
+    padding-bottom: 100px;
+    position: relative;
+    min-height: 800px;
+    height: 100%;
+}
+
+.about-sec .container::before {
+    position: absolute;
+    content: '';
+    right: 35%;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    background-color: #24323033;
+    z-index: -1;
+}
+
+.about-sec .container::after {
+    position: absolute;
+    content: '';
+    left: 35%;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    background-color: #24323033;
+    z-index: -1;
+}
+
+.about-sec .text-contents {
+    position: relative;
+    z-index: 2;
+    background-color: var(--secondary-color);
+}
+
+.about-sec .row {
+    padding-left: 75px;
+    padding-right: 65px;
+    position: relative;
+}
+
+.about-sec p {
+    padding-top: 35px;
+    padding-bottom: 55px;
+    max-width: 535px;
+}
+
+.about-sec .banner-right img {
+    width: 100%;
+    max-width: 380px;
+    height: 450px;
+    object-fit: cover;
+}
+
+.about-sec .banner-right {
+    position: relative;
+}
+
+.about-sec .banner-right img:first-child {
+    /* position: absolute;
+   left: 0;
+   top: 170px; */
+    transform: translateY(170px);
+}
+
+.about-sec .banner-right img:nth-child(2) {
+    right: 0;
+    position: absolute;
+    top: 0;
+}
+
+.promo-sec {
+    background-color: var(--primary-color);
+    padding-top: 78px;
+    padding-bottom: 70px;
+    position: relative;
+    z-index: 2;
+}
+
+.promo-sec::after {
+    position: absolute;
+    right: 2%;
+    content: '';
+    top: 25%;
+    background: url('../images/promo-vector.png') no-repeat;
+    width: 160px;
+    height: 65px;
+    background-size: contain;
+    z-index: -1;
+}
+
+.promo-sec::before {
+    position: absolute;
+    left: 2%;
+    content: '';
+    bottom: 25%;
+    background: url('../images/promo-vector.png') no-repeat;
+    width: 160px;
+    height: 65px;
+    background-size: contain;
+}
+
+.promo-sec .header-contents p {
+    font-family: "Lato-Medium";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16.8px;
+    letter-spacing: 8px;
+    text-align: center;
+    color: var(--white-color);
+}
+
+.promo-sec .header-contents h2 {
+    color: var(--white-color);
+    padding-bottom: 67px;
+}
+
+.promo-sec .promo-slider .promo-single img {
+    width: 100%;
+    height: 554px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.promo-sec .promo-slider .promo-single {
+    margin: 0 25px;
+}
+
+.promo-sec .promo-slider .promo-single h4 {
+    font-family: "Felix Titling";
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28.07px;
+    letter-spacing: 3px;
+    color: var(--primary-color);
+}
+
+.promo-sec .promo-slider .promo-single .promo-box {
+    padding: 38px 38px 38px 31px;
+    background-color: #FFFFFF;
+    box-shadow: 3px 4px 20px 10px #0000001A;
+    border-radius: 5px;
+    transform: translateY(-50px);
+    transition: all .5s ease;
+    width: fit-content;
+    height: fit-content;
+    margin-left: 25px;
+    max-width: 80%;
+}
+
+.promo-sec .promo-slider .promo-single .hover-text {
+    opacity: 0;
+    transition: all 1.1s ease;
+    transform: translateX(-20px) scale(0.8);
+    transform-origin: bottom;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.promo-sec .promo-slider .promo-single:hover .hover-text {
+    opacity: 1;
+    transform: none;
+    max-height: 300px;
+}
+
+.promo-sec .promo-slider .promo-single:hover .promo-box {
+    transform: translateY(-250px);
+}
+
+.promo-sec .promo-slider .slick-arrow {
+    background: none;
+    border: none;
+    font-size: 0;
+    background: url('../images/slider-arrow.svg') no-repeat;
+    position: absolute;
+    width: 85px;
+    height: 35px;
+    background-size: contain;
+    content: '';
+    top: 40%;
+    margin: auto;
+}
+
+.promo-sec .promo-slider {
+    width: 90%;
+    margin: auto;
+}
+
+.promo-sec .promo-slider .slick-arrow.slick-prev {
+    left: -80px;
+    transform: rotate(180deg);
+}
+
+.promo-sec .promo-slider .slick-arrow.slick-next {
+    right: -80px;
+}
+
+.event-sec h2 {
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.event-sec .text-col p span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16.8px;
+    letter-spacing: 6px;
+    color: #000;
+}
+
+.event-sec .text-col h4 {
+    font-family: "Felix Titling";
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28.07px;
+    letter-spacing: 3px;
+    color: var(--primary-color);
+}
+
+.event-sec .text-col {
+    padding: 24px 18px 34px 30px;
+}
+
+.event-sec .event-single img.main-img {
+    width: 100%;
+    height: 316px;
+    object-fit: cover;
+}
+
+.event-sec .event-single {
+    background-color: var(--white-color);
+    box-shadow: 3px 4px 30px 0px #00000033;
+    border-radius: 5px;
+    margin: 0 23px;
+}
+
+.event-sec .event-single .btn-primary img {
+    width: 57px;
+    height: 22px;
+    object-fit: contain;
+    margin-left: 30px;
+}
+
+.event-sec .event-single .btn-primary {
+    text-align: left;
+    border-radius: 0 0 5px 5px ;
+}
+
+.event-sec .event-single .btn-primary:hover {
+    background: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--secondary-color) !important;
+}
+
+.event-sec .event-slider {
+    transform: translateX(10%);
+}
+
+.event-sec {
+    width: 100%;
+    overflow: hidden;
+}
+
+.event-sec .container {
+    padding: 70px 0;
+    border-left: 1px solid #24323033;
+    border-right: 1px solid #24323033;
+}
+
+.event-sec .btn-primary {
+    width: fit-content;
+    margin: auto;
+}
+
+.galler-sec {
+    background-color: var(--primary-color);
+}
+
+.galler-sec h2 {
+    color: var(--secondary-color);
+}
+
+.galler-sec .container {
+    position: relative;
+    z-index: 1;
+}
+
+.gallery-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-inner a {
+    width: 100%;
+}
+
+.gallery-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+
+.galler-sec .nav-tabs {
+    border-bottom: 0;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 55px;
+}
+
+.galler-sec .nav-tabs .nav-item.show .nav-link,
+.galler-sec .nav-tabs .nav-link.active {
+    background: transparent;
+    border: 0;
+}
+
+.galler-sec .nav-tabs .nav-link {
+    color: var(--white-color) !important;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    position: relative;
+    font-family: "Lato-Medium";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16.8px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.galler-sec .nav-tabs .nav-link.active::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: -20px;
+    background-color: #0EE3C4;
+    color: var(--white-color);
+}
+
+/* footer  */
+
+footer .footer-row {
+    padding-top: 70px;
+    padding-bottom: 35px;
+}
+
+footer .footer-row p {
+    color: #000000;
+}
+
+footer .footer-row h6{
+    font-family: "Lato-Bold";
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+footer .footer-row h3 {
+    font-family: "Felix Titling";
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 46.78px;
+    letter-spacing: 3px;
+
+}
+
+footer .footer-row .layout-col {
+    width: 80%;
+}
+
+footer .social-icons {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+footer .social-icons li a {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    margin-right: 10px;
+} 
+
+footer .social-icons li a img { 
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
+
+footer .signup-form .btn-primary {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    min-height: 68px;
+    border-radius: 0 5px 5px 0;
+}
+
+footer .signup-form {
+    margin-top: 24px;
+}
+
+footer .signup-form input{
+    padding: 18px 25px;
+    background-color: #F2F1E3;
+    border: none;
+    width: 100%;
+    display: inline-block;
+    min-height: 68px;
+    border-radius: 5px 0 0 5px;
+}
+
+footer .divider {
+    border-top: .5px solid #B6B6B6 ;
+}
+
+footer .c-text {
+    font-size: 14px;
+    line-height: 16.8px;
+    letter-spacing: 3px;
+    color: #000000;
+}
+
+footer .copyright {
+    padding: 35px 0;
+}
+
+footer .copyright ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px;
+}
+
+footer .copyright li a {
+    font-family: "Lato-Medium";
+    font-size: 14px;
+    line-height: 16.8px;
+    letter-spacing: 3px;
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+}
